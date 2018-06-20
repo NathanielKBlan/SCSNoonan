@@ -1,0 +1,35 @@
+/* Created on 06/18/18
+ * Author: Nathaniel K. Blanquel
+ * Purpose: To draw some shapes using text.
+ */
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	public void printSquare() {
+		
+		//Hard-coded part
+		System.out.println("*******/t*******");
+		System.out.println("*/t*/t*/t*");
+		System.out.println("*/t*/t*/t*");
+		System.out.println("*/t*/t*/t*");
+		System.out.println("*/t*/t*/t*");
+		System.out.println("*/t*/t*/t*");
+		System.out.println("*******/t*******");
+	}
+	
+	public void printRectangle() {
+		
+	}
+	
+	public void printCircle() {
+		
+	}
+	
+	public void printTriangle() {
+		
+	}
+}

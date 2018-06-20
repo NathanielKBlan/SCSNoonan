@@ -1,0 +1,21 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("\t Power");
+		for(int i = 0; i <= 5; i++) {
+			if(i % 6 == 0) {
+				System.out.println("N " + i);
+			}
+		}
+	}
+	
+	static int getPower(int x, int y) {
+		for(int i = 0; i < y; i++) {
+			x *= x;
+			System.out.print("   " + x);
+		}
+		return x;
+	}
+	
+}

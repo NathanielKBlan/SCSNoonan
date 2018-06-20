@@ -1,0 +1,20 @@
+
+public class Main {
+	
+	public static void main(String[] args) {
+		printRes(5, -5, -1);
+	}
+	
+	static double calculatePosRoot(double a, double b, double c) {
+		return ((-1*b) + Math.sqrt((b*b) - 4*a*c))/(2*a);
+	}
+	
+	static double calculateNegRoot(double a, double b, double c) {
+		return ((-1*b) - Math.sqrt((b*b) - 4*a*c))/(2*a);
+	}
+	
+	static void printRes(double a, double b, double c) {
+		System.out.println("For the equation " + (int) a + "x^2 + " + (int) b + "x + " + (int) c + ", the solutions are \n"
+				+ "x1 = " + calculatePosRoot(a, b, c) + " and x2 = " + calculateNegRoot(a, b, c) + ".");
+	}
+}
