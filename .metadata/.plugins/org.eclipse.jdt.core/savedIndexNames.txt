@@ -1,7 +1,0 @@
-INDEX VERSION 1.130+/Users/nathaniel_k_blanquel/my-workspace/.metadata/.plugins/org.eclipse.jdt.core
-189326389.index
-3927879410.index
-2423344738.index
-3997357570.index
-2876112704.index
-3545301634.index
