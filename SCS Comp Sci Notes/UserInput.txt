@@ -1,0 +1,8 @@
+----Ways to obtain user input in programs----
+Basic methods:
+~Command Line --> (args)
+~Scanner
+Advanced methods:
+~Text File
+~UI
+~Voice

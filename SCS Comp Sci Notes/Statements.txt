@@ -1,0 +1,17 @@
+*Statements are always read from left to right by compiler.
+
+---The Onion of Programming---
+1 = center.
+1. Var / members / objects
+2. Operations
+3. Statements
+4. Functions / Methods (These can only have one output);
+5. Class
+6. Library
+
+In programming you go from the center of the onion to the outside.
+
+---Three classes of operators---
+1. Math operators: +, -, *, /, %
+2. Comparison operators: ==, !=, <, >, <=, >=, results in 1 or 0
+3. Logical Boolean operators: && (=D-), || (=)>-), ! (-|>-)
