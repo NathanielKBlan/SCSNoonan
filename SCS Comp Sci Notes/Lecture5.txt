@@ -1,0 +1,8 @@
+---Switch---
+~A switch statement has various cases tied to the parameter in the switch statement.
+~There is a default case.
+
+---Loops---
+~Two types of loops:
+  -For loops
+  -While loops

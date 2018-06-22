@@ -17,15 +17,12 @@ public class UI{
 
     String birthYear;
     int year;
-    frame.addWindowListener(new WindowAdapter(){
-      @Override
-      public void windowClosing(WindowEvent e){
-          System.exit(0);
-      }
-    });
 
     try{
       birthYear = JOptionPane.showInputDialog("Enter the year of your birth.");
+      if(birthYear == null){
+        System.exit(0);
+      }
       year = Integer.parseInt(birthYear);
       return year;
     }catch(Exception e){
