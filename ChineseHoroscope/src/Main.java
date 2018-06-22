@@ -11,10 +11,23 @@ public class Main{
   public static void main(String[] args){
 
     JFrame frame = new JFrame();
+<<<<<<< HEAD
     UI ui = new UI();
 
     int year;
     year = ui.getInput();
+=======
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.addWindowListener(new WindowAdapter(){
+      @Override
+      public void windowClosing(WindowEvent e){
+          System.exit(0);
+      }
+    });
+
+    int year;
+    year = getInput(frame);
+>>>>>>> cc7c2abc59aa9761399012fc0d8820904a33ca10
 
     String message = "You are a ";
 
@@ -61,4 +74,22 @@ public class Main{
     System.exit(0);
   }
 
+<<<<<<< HEAD
+=======
+  static int getInput(JFrame frame){
+
+    String birthYear;
+    int year;
+
+    try{
+      birthYear = JOptionPane.showInputDialog("Enter the year of your birth.");
+      year = Integer.parseInt(birthYear);
+      return year;
+    }catch(Exception e){
+      JOptionPane.showMessageDialog(frame, "That was not a valid year number.");
+      return getInput(frame);
+    }
+
+  }
+>>>>>>> cc7c2abc59aa9761399012fc0d8820904a33ca10
 }
