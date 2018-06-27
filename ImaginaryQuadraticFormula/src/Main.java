@@ -21,7 +21,7 @@ public class Main{
       boolean imaginary = false;
 
       System.out.print("Enter the value for a: ");
-      a = Double.parseDouble(sc.next());
+      a = Dtouble.parseDouble(sc.next());
       System.out.print("Enter the value for b: ");
       b = Double.parseDouble(sc.next());
       System.out.print("Enter the value for c: ");
