@@ -26,6 +26,9 @@ public class Main {
 			printMenu();
 			excecuteOptions(sc, cs, gs);
 		}
+		
+		System.out.println("Thank you for using my program!");
+		sc.close();
 	}
 	
 	
