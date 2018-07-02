@@ -3,6 +3,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.Writer;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
+
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.stream.JsonReader;
@@ -109,6 +111,13 @@ public class Main {
 			break;
 		case "7":
 			quit = true;
+			saveChanges(gs, sc, cs);
+			System.out.println("Exiting the program.");
+			try {
+				TimeUnit.SECONDS.sleep(2);
+			}catch(Exception e) {
+	
+			}		
 			break;
 		}
 	}
