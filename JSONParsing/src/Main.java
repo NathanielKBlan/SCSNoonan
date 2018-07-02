@@ -4,7 +4,6 @@ import java.io.FileWriter;
 import java.io.Writer;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.stream.JsonReader;

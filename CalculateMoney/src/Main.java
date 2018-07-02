@@ -23,7 +23,7 @@ public class Main {
 	
 	static int getAmountOf(Scanner sc, String type) {
 		int times;
-		System.out.print("How many of " + type + "do you have? " );
+		System.out.print("How many of " + type + " do you have? " );
 		return times = Integer.parseInt(getInput(sc));
 	}
 	
@@ -32,9 +32,9 @@ public class Main {
 		
 		
 		switch(type){
-		case "penies":
+		case "pennies":
 			return .01 * getAmountOf(sc, type);
-		case "nickles":
+		case "nickels":
 			return .05 * getAmountOf(sc, type);
 		case "dimes":
 			return .10 * getAmountOf(sc, type);
