@@ -20,7 +20,7 @@ public class Classroom {
 	public void removeStudent(Scanner sc) {
 		int foundMatch = 0;
 		Student[] commonNamedStudents = new Student[students.size()];
-		System.out.println("What is the first name of the student? ");
+		System.out.print("What is the first name of the student? ");
 		String firstName = sc.next();
 		for(Student s: students) {
 			if(s.getFirstName().equals(firstName)) {
@@ -57,7 +57,7 @@ public class Classroom {
 		System.out.print("What is the first name of the student being graded? ");
 		int foundMatch = 0;
 		int stuIndex = 0;
-		boolean foundFirst = false;
+
 		String firstName = sc.next();
 		for(int i = 0; i < students.size(); i++) {
 			if(students.get(i).getFirstName().equals(firstName)) {
@@ -69,7 +69,7 @@ public class Classroom {
 			boolean foundLast = false;
 			System.out.print("What is the last name of the student? ");
 			String lastName = sc.next();
-			for(int i = 0; i < foundMatch; i++) {
+			for(int i = 0; i < students.size(); i++) {
 				if(students.get(i).getLastName().equals(lastName) && students.get(i).getFirstName().equals(firstName)) {
 					foundLast = true;
 					stuIndex = i;
@@ -78,10 +78,8 @@ public class Classroom {
 			if(!foundLast) {
 				System.out.println("That student is not in the roster.");
 			}
-		}else {
-			foundFirst = true;
 		}
-		if(!foundFirst || foundMatch == 0) {
+		if(foundMatch == 0) {
 			System.out.println("That student is not in the roster.");
 		}
 		else {
@@ -122,7 +120,7 @@ public class Classroom {
 	}
 	
 	public void sort(Scanner sc) {
-		System.out.println("Would you like to sort by GPA or alphabetically? (G or A)");
+		System.out.print("Would you like to sort by GPA or alphabetically? (G or A) ");
 		String response = sc.next();
 		if(response.toUpperCase().equals("G")) {
 			gpaSelectionSort();

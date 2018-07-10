@@ -1,21 +1,19 @@
 import java.util.Scanner;
 
 class Main extends Word{
-  static Word w = new Word();
-  
 
   public static void main(String[] args){
 	  
+	 Word w = new Word();
 	 String str;
 	 Scanner s = new Scanner(System.in);
-	 String input;
 	 String guessedC;
 	 int guess = 0;
 	 int wrongGuess = 0;
 	 int lettersFound = 0;
-	 String guessedLetters;
+	 String guessedLetters = "";
 	 String bW = "";
-	 boolean letterFound;
+	 int letterFound;
 	  
     for(int i = 0; i < bW.length(); i++){
       System.out.print(bW.substring(i,i+1) + " " );
@@ -28,33 +26,33 @@ class Main extends Word{
       bW += "_";
     }
     while(guess < str.length() && lettersFound < str.length()){
-      letterFound = false;
-      input = s.next();
-      input = input.toLowerCase();
-      guessedC = input;
-      guessedLetters = "";
+      letterFound = 0;
+      guessedC = s.next().toLowerCase();
+      while(guessedLetters.contains(guessedC)) {
+    	  System.out.println("You already used that letter");
+    	  guessedC = s.next().toLowerCase();
+      }
       guessedLetters += guessedC;
       for (int i=0; i < str.length(); i ++)  {
         String currentLetter = str.substring(i, i+1);
         if(currentLetter.toUpperCase().equals(guessedC.toUpperCase())){
           bW = bW.substring(0,i) + guessedC + bW.substring(i + 1);
           System.out.println(bW);
-          letterFound = true;
+          letterFound += 1;
         }
       }
 
-      if(letterFound){
+      if(letterFound >= 1){
         System.out.println("You are correct!");
-        lettersFound++;
+        lettersFound += letterFound;
         guess++;
       }else{
         System.out.println("You are wrong...");
         wrongGuess++;
       }
 
-      if (wrongGuess >= 1)
-        System.out.println("\n");
-
+      if (wrongGuess == 1 && letterFound == 0)
+        System.out.println("\nThe person has been found guilty and scentenced to death by grand jury.");
       if (wrongGuess >= 2)
         System.out.println("----|");
       if (wrongGuess >= 3)
@@ -69,7 +67,9 @@ class Main extends Word{
     }
     
     if(lettersFound == str.length()) {
+      s.close();
   	  System.out.println("You win!");
+  	  System.exit(0);
     }
 
   }
